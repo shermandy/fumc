@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			name_label.innerHTML = "Child " + (i+1) + "\'s name"
 			var name = fieldset.appendChild(document.createElement("input"))
 			name.type = "text"
-			name.name = "child" + (i+1)
+			name.name = "child" + (i+1) + "name"
 			name.placeholder = "Full name"
 			name.classList.add("input")
 			var age_label = fieldset.appendChild(document.createElement("label"))
@@ -59,6 +59,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			age_label.innerHTML = "Child " + (i+1) + "\'s age"
 			var age = fieldset.appendChild(document.createElement("input"))
 			age.type = "number"
+			age.name = "child" + (i+1) + "age"
 			age.placeholder = "Age"
 			age.classList.add("input")
 			fieldset.appendChild(document.createElement("br"))
