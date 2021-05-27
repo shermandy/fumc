@@ -18,6 +18,11 @@ document.addEventListener("DOMContentLoaded", function() {
 	add_child.addEventListener("click", function() {
 		var old_value = document.getElementById('number_of_children').value
 		var new_value = parseFloat(old_value) + 1
+		if (old_value < 10) {
+			var new_value = parseFloat(old_value) + 1
+		} else {
+			new_value = 10
+		}
 		document.getElementById('number_of_children').value = new_value
 		change_children(new_value);
 	})
@@ -51,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			name_label.innerHTML = "Child " + (i+1) + "\'s name"
 			var name = fieldset.appendChild(document.createElement("input"))
 			name.type = "text"
-			name.name = "child" + (i+1) + "name"
+			name.name = "Child " + (i+1) + " Name"
 			name.placeholder = "Full name"
 			name.classList.add("input")
 			var age_label = fieldset.appendChild(document.createElement("label"))
@@ -59,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			age_label.innerHTML = "Child " + (i+1) + "\'s age"
 			var age = fieldset.appendChild(document.createElement("input"))
 			age.type = "number"
-			age.name = "child" + (i+1) + "age"
+			age.name = "Child " + (i+1) + " Age"
 			age.placeholder = "Age"
 			age.classList.add("input")
 			fieldset.appendChild(document.createElement("br"))
