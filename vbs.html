@@ -13,7 +13,7 @@
 <body>
 	<section class="welcome">
 		<header>
-			<h1>First United Methodist Church</h1>
+			<h1><a href="index.html">First United Methodist Church</a></h1>
 			<svg id="menu-open" viewBox="0 0 100 80" width="25" height="30">
 				<rect width="100" height="14" rx="4"></rect>
 				<rect y="30" width="100" height="14" rx="4"></rect>
@@ -29,14 +29,23 @@
 					<li><a href="#">Ministry</a></li>
 					<li><a href="#">Classes</a></li>
 					<li><a href="#">Sunday School</a></li>
-					<li><a href="#">VBS</a></li>
+					<li><a href="vbs.html">VBS</a></li>
 					<li><a href="#">Contact</a></li>
 				</ul>
 			</nav>
 		</header>
 		
 	</section>
-	<section class="main-info">
+	<section id="vbs_info">
+		<h2>The Wacky World of Water</h2>
+		<h3>August 9 through 13</h3>
+		<p><a href="#registration_form" class="button">Register Now</a></p>
+		<div>
+			<p>Your child will have fun, meet new friends, and, most importantly, grow their faith in our Lord during FUMC's "The Wacky World of Water" Vacation Bible School. Join us for the big pool party at the Waynesburg pool on August 13!</p>
+			<p>Registration opens now!</p>
+		</div>
+	</section>
+	<section id="registration_form">
 		<form id="vbs_form" name="VBS" method="POST" data-netlify="true" action="/success.html">
 			<h2>VBS Registration Form</h2>
 			<label>Parent's Email</label>
@@ -90,7 +99,7 @@
 			
 			<label>Special requests</label>
 			<textarea class="input" rows="4" cols="40" name="message"></textarea>
-			<button type="submit" id="form_submit">Register</button>
+			<button type="submit" class="button" id="form_submit">Register</button>
 		</form>		  
 	</section>
 	<footer>

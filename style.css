@@ -22,9 +22,13 @@ h1 {
 	font-family: var(--font-sans);
 	text-transform: uppercase;
 	font-weight: 400;
-	color: var(--accent-color);
 	margin: 0;
 	font-size: 1.3rem;
+}
+
+h1 a {
+	color: var(--accent-color);
+	text-decoration: none;
 }
 
 h2, h3, h4, h5, h6 {
@@ -43,8 +47,6 @@ body {
 .welcome {
 	background: var(--gray-dark);
 }
-
-
 
 header {
 	display: flex;
@@ -67,7 +69,7 @@ header nav {
 	left: 0;
 	z-index: 9;
 	height: 100vh;
-	width: 100vw;
+	width: 100%;
 	background: var(--accent-color-dark);
 	opacity: 0;
 }
@@ -128,8 +130,12 @@ header nav a {
 	grid-column: 3 / 6;
 }
 
-.main-info {
+.main-info, #registration_form {
 	background: rgb(var(--background-light));
+}
+
+.main-info a {
+	color: #000;
 }
 
 .main-info > div {
@@ -284,6 +290,15 @@ footer small {
 	margin-top: 0;
 }
 
+#registration_form {
+	padding: 1rem;
+}
+
+#registration_form h2 {
+	margin-top: 0;
+	padding-top: 1rem;
+}
+
 /* Hide arrows on number input */
 #child_forms input::-webkit-outer-spin-button,
 #child_forms input::-webkit-inner-spin-button {
@@ -347,7 +362,7 @@ footer small {
 	cursor: pointer;
 }
 
-#form_submit {
+.button {
 	background: var(--accent-color-dark);
 	color: #fff;
 	border: 0;
@@ -355,6 +370,44 @@ footer small {
 	margin-bottom: 2rem;
 	cursor: pointer;
 	font-size: 1rem;
+	text-decoration: none;
+}
+
+#vbs_info {
+	background-color: var(--greige);
+	background-image: url(images/water.jpg);
+	background-size: cover;
+	padding: 1rem;
+	color: #fff;
+	line-height: 1.6;
+}
+
+#vbs_info p {
+	text-shadow: 1px 1px 0px rgba(0, 0, 0, 1);
+}
+
+#vbs_info span {
+	max-width: 66%;
+	display: inline-block;
+}
+
+#vbs_info h2, #vbs_info h3 {
+	color: #fff;
+	text-shadow: 1px 1px 0px rgba(0, 0, 0, 1);
+}
+
+#vbs_info h3 {
+	color: rgba(255,255,255,0.9);
+	margin-top: 1rem;
+}
+
+#vbs_info a.button {
+	background: rgba(255,255,255,0.9);
+	color: var(--accent-color-dark);
+	padding: 0.5rem;
+	display: inline-block;
+	margin: 0.75rem 0;
+	text-shadow: 0 0 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -403,7 +456,7 @@ footer small {
 }
 
 @media screen and (min-width: 1000px) {
-	.welcome > *, .main-info > *, .message > *, footer > * {
+	.welcome > *, .main-info > *, .message > *, footer > *, #registration_form > *, #vbs_info > * {
 		max-width: 1100px;
 		margin: 0 auto;
 	}
@@ -483,6 +536,20 @@ footer small {
 	#social {
 		grid-row: 1 / 2;
 		grid-column: 3 / 4;
+	}
+	#vbs_info div {
+		display: flex;
+	}
+	#vbs_info div > * {
+		flex-basis: 0;
+	}
+	#vbs_info div > p:first-of-type {
+		flex-grow: 3;
+		padding-right: 2rem;
+	}
+	#vbs_info div > p:last-of-type {
+		flex-grow: 1;
+		padding-left: 1rem;
 	}
 
 }
