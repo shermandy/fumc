@@ -26,7 +26,7 @@
 				</svg>
 				<ul>
 					<li><a href="#">About</a></li>
-					<li><a href="#">Ministry</a></li>
+					<li><a href="ministry.html">Ministry</a></li>
 					<li><a href="#">Classes</a></li>
 					<li><a href="#">Sunday School</a></li>
 					<li><a href="vbs.html">VBS</a></li>
@@ -49,16 +49,18 @@
 		<form id="vbs_form" name="VBS" method="POST" data-netlify="true" action="/success.html">
 			<h2>VBS Registration Form</h2>
 			<label>Parent's Email</label>
-			<input class="input" type="email" name="email" placeholder="name@example.com" required/>
+			<input class="input" type="email" name="email" placeholder="email@example.com" required/>
 			
 			<label>Parent's Phone Number</label>
 			<input class="input" type="tel" name="phone" placeholder="000-000-0000" required/>
 			<label>Parent's address</label>
-			<textarea class="input" rows="4" cols="40" name="address" required></textarea>
+			<input class="input" type="text" name="address" required/>
+			<label>Parent's city</label>
+			<input class="input" type="text" name="city" require/>
+			<label>Parent's ZIP code</label>
+			<input class="input" type="text" name="zip" pattern="[0-9]{5}" required/>
 
-			<div id="children">
-				
-			</div>
+
 			<label for="number_of_children">Number of children attending</label>
 			<div id="change_children">
 				<div id="remove_child">
@@ -107,7 +109,7 @@
 			<nav>
 				<ul>
 					<li><a href="#">About</a></li>
-					<li><a href="#">Ministry</a></li>
+					<li><a href="ministry.html">Ministry</a></li>
 					<li><a href="#">Classes</a></li>
 					<li><a href="#">Sunday School</a></li>
 					<li><a href="#">VBS</a></li>
@@ -122,13 +124,14 @@
 			<address>
 				<ul>
 					<li>112 N. Richhill Street, Waynesburg, PA 15370</li>
-					<li href="tel:+17246275951">724-627-5951</li>
-					<li href="mailto:firstumcpa@windstream.net">firstumcpa@windstream.net</li>
+					<li><a href="tel:+17246275951">724-627-5951</a></li>
+					<li><a href="mailto:firstumpca112@gmail.com">firstumpca112@gmail.com</a></li>
 				</ul>
 			</address>
 			<small>&copy; Copyright 2021, FUMC</small>
 		</div>
 	</footer>
 	<script src="script.js"></script>
+	<script src="form.js"></script>
 </body>
 </html>
